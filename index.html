@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foosball Score Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Foosball Score Tracker</h1>
+
+        <!-- Select number of players -->
+        <div id="playerSelection">
+            <p>Are you playing a two or four player game?</p>
+            <button onclick="setPlayerCount(2)">2 Players</button>
+            <button onclick="setPlayerCount(4)">4 Players</button>            
+        </div>
+
+        <!-- Input player names -->
+        <div id="playerNames" style="display: none;">
+            <form id="namesForm">
+                <div id="nameInputs"></div>
+                <button type="button" onclick="startGame()">Start Game</button>
+            </form>
+        </div>
+
+        <!-- Score tracker -->
+        <div id="scoreTracker" style="display: none;">
+            <form id="scoreForm">
+                <div id="scoreInputs"></div>
+                <button type="button" onclick="submitScores()">Submit Scores</button>
+            </form>
+            <div id="finalScores" style="display: none;">
+                <h2>Final Scores</h2>
+                <div id="scoreBoard"></div>
+                <button onclick="resetGame()">Reset Game</button>
+            </div>
+        </div>
+    </div>
+    <div id="playerContainer"></div>
+    <div id="results"></div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
